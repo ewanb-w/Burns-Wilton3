@@ -157,7 +157,6 @@ window.onload = function init()
             var vColor = gl.getAttribLocation( program, "vColor" );
             gl.vertexAttribPointer( vColor, 3, gl.FLOAT, false, 0, 0 );
             gl.enableVertexAttribArray( vColor );
-<<<<<<< HEAD
             break;
 
           case 'P': //Turns square pink
@@ -168,19 +167,6 @@ window.onload = function init()
                 vec3(1.0, 0.0, 1.0),
                 vec3(1.0, 0.0, 1.0)
             ];
-=======
-            
-            break;
-
-            case 'O': //Turns square orange
-            case 'o':
-                colors = [
-                    vec3(1.0, 0.0, 1.0),
-                    vec3(1.0, 0.0, 1.0),
-                    vec3(1.0, 0.0, 1.0),
-                    vec3(1.0, 0.0, 1.0)
-                ];
->>>>>>> 144422b33e70f72dfc114fb698612e0bef763c5d
 
             var cBuffer = gl.createBuffer();
             gl.bindBuffer( gl.ARRAY_BUFFER, cBuffer );
