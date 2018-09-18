@@ -1,7 +1,10 @@
 //author: Ewan Burns-Wilton
-//date: 9/18/18
-//description: This program adds animation to the rotating square.
-//proposed points (out of 15): a description of the number of points you believe your assignment is worth
+//date: 9/17/18
+//description: This program adds on to the rotating square program. My version allows the user to change
+//the color of the square to black, green, pink, and back to red.
+//proposed points (out of 15): 13/15 - I did everything but use a uniform variable
+//within my fragment shader.
+//Pressing the g key turns the square green. Pressing the p key turns the square pink.
 
 "use strict";
 
@@ -138,7 +141,7 @@ window.onload = function init()
     window.onkeydown = function( event ) {
         var key = String.fromCharCode(event.keyCode);
         switch( key ) {
-          case 'G': //Turns square green
+          case 'G': //Turn square green
           case 'g':
             colors = [
                 vec3(0.0, 1.0, 0.0),
@@ -154,11 +157,10 @@ window.onload = function init()
             var vColor = gl.getAttribLocation( program, "vColor" );
             gl.vertexAttribPointer( vColor, 3, gl.FLOAT, false, 0, 0 );
             gl.enableVertexAttribArray( vColor );
-            }
             break;
 
-          case 'O': //Turns square orange
-          case 'o':
+          case 'P': //Turns square pink
+          case 'p':
             colors = [
                 vec3(1.0, 0.0, 1.0),
                 vec3(1.0, 0.0, 1.0),
